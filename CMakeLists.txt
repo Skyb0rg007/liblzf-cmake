@@ -18,6 +18,8 @@ target_include_directories(lzf
     PRIVATE src
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
+add_library(LZF::LZF ALIAS lzf)
+
 install(TARGETS lzf
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
